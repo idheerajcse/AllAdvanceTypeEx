@@ -1,0 +1,338 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using System.Data.Odbc;
+using System.Threading;
+using System.Collections;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        public delegate void mymethod();
+        static void Main(string[] args)
+        {
+           // #region
+            //Dictionary<int, string> dict = new Dictionary<int, string>();
+            //dict.Add(1, "Dheeraj");
+            //dict.Add(2, "Raja");
+            //dict.Add(3, "Gopal");
+            //List<string> value = new List<string>() { "1", "2", "3", "4", "5", "6" };
+            //List<int> keyValue=new List<int>(){1,2,3,4,5,6};
+
+
+
+            //foreach (var key in dict.Keys)
+            //{
+            //    Console.WriteLine(dict[key].ToString());
+            //}
+            //Console.ReadLine();
+            //    #region
+            //    using (OdbcConnection con = new OdbcConnection("DSN=AMPHORAFLEETIME; providerName=System.Data.OdbcClient;uid=ictspass; Pwd=ictspass;"))
+            //    {
+
+            //        try
+            //        {
+            //            Console.WriteLine(con.State);
+            //            if (con.State != ConnectionState.Open)
+            //                con.Open();
+            //            Console.WriteLine(con.DataSource.ToString());
+            //            Console.WriteLine(con.Database.ToString());
+            //            Console.WriteLine(con.State);
+            //            Console.WriteLine("Hello Test");
+            //            //throw new FormatException("Version for text is not found");
+            //            Abc<string> a = new Abc<string>();
+            //            a.GetData("10", "20");
+            //            Console.WriteLine(typeof(Abc<int>));
+
+
+            //        }
+            //        catch (FormatException ex)
+            //        {
+            //            Console.WriteLine(ex.Message);
+
+            //        }
+
+            //        List<int> lst = new List<int>() { 1, 2, 3, 4, 5, 5, 6, 7, 8, };
+            //        List<int> copyLst = new List<int>();
+
+            //       int vale= lst.FirstOrDefault(x => x>35 && x%2==0);
+            //       lst.Insert(3, 8);
+            //       int val=lst.IndexOf(6);
+
+            //       int sum=lst.Sum();
+            //       IEnumerable<int> lstVal  = lst.TakeWhile(x => x > 2);
+            //       foreach (int i in lstVal.ToList())
+            //       {
+            //           Console.Write(i.ToString());
+
+            //       }
+            //       copyLst.Clear();
+            //       IEnumerable<int> valTEst= lst.Distinct();
+
+            //       IEnumerable<int> ValueTest2 = from s in lst
+            //                                     orderby s descending
+            //                                     select s ;
+
+            //       IEnumerable<int> valueTest3 = lst.OrderByDescending(x => x);
+
+            //    //IEnumerable<int> valueTest4 =lst.Reverse();
+
+
+            //     IEnumerable<bool> bln = lst.Select(X => X%2==0);
+            //     //foreach (bool i in bln)
+            //     //{
+            //     //    Console.WriteLine(i + "");
+
+            //     //}
+
+            //    }
+            //    #endregion
+            //    #region MyRegion
+            //    DelTest test = new DelTest();
+            //    GetData data = new GetData(test.AddTwoNo);
+            //    int valueMaster = data(10, 20);
+            //    Console.Write(data(10, 20));
+            //    List<int> lst2 = new List<int>() { 1, 2, 3, 4, 5, 5, 6, 7, 8, };
+            //    CheckNumber check = test.chekNumberTest;
+            //   List<int> resultLit= DelTest.TestdelegateParameters(lst2, check);
+            //   foreach (int s in resultLit)
+            //   {
+            //       Console.WriteLine("Values are" + s + "   ");
+            //   }
+            //   lst2.ForEach(x => { Console.WriteLine("Hello" + x.ToString()); });
+            //   lst2.ForEach(y => { Console.WriteLine("Test Master" + y.ToString()); });
+            //    Console.ReadKey();
+            //    #endregion
+
+            //#endregion
+
+            
+            ////mymethod obj = new mymethod(print);
+            ////IAsyncResult tag = obj.BeginInvoke(null, null);
+            ////Console.WriteLine("I am not completed yet");
+            ////obj.EndInvoke(tag);
+            ////Console.WriteLine("Execution Over");
+            ////B objTest = new B();
+            ////objTest.GetName();
+
+            ////A objParent = new B();
+            ////objParent.GetName();
+       
+            ////OverLoadibng o = new OverLoadibng();
+            ////o.Add(10, 20);
+            ////Customers cust = new Customers();
+            ////Address add= cust[1];
+            ////Address addddd= cust["Dheeraj"];
+
+            ////Console.WriteLine(add.Id + "" + add.Name);
+            //List<int> val = new List<int>();
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        val.Add(i);
+            //    }
+            
+            //}
+
+            
+            ////foreach(int b in value)
+            ////{
+            ////    Console.Write(b);
+            
+            ////}
+
+            //    Console.ReadKey();
+            //    #region "ArrayList"
+            //    ArrayList array = new ArrayList();
+            //    string[] arr = { "Hari", "Gopal", "Namo" };
+            //    array.AddRange(arr);
+            //    foreach (string str in array)
+            //    {
+            //        Console.WriteLine(str);
+            //    }
+            //    array.Insert(2, "Dheraj");
+            //    array.Remove("Dheeraj");
+            //    foreach (string str in array)
+            //    {
+            //        Console.WriteLine(str);
+            //    }
+            
+            
+                //#endregion
+
+            //#region "HashTable"
+            //    Hashtable hash = new Hashtable();
+            //    hash.Add("value1","value1");
+            //    hash.Add("value2", "value2");
+            //    hash.Add("value3", "value3");
+
+            //    foreach (object key in hash.Keys)
+            //    {
+            //        Console.WriteLine(hash[key]);
+                
+            //    }
+
+
+            //    Console.ReadKey();
+
+            //#endregion
+
+            //#region "Dictionary"
+            //Dictionary<int, int> d = new Dictionary<int, int>();
+            //d.Add(1, 1);
+            //d.Add(2, 2);
+            //d.Add(3, 3);
+            
+            //    foreach(dynamic k in d.Keys)
+            //    {
+            //        Console.WriteLine(k);
+            //    }
+            //    Console.ReadKey();
+            //    dynamic daaa = new int[6] { 1, 2, 3, 4, 5, 6 };
+            //#endregion
+            #region "Null Operations"
+            int? a = 20;
+            int b = 10; //int? b = 10; not valid error
+            int c = a ?? b;
+            Console.Write(a);
+            bool ab = a is int?;
+            
+            #endregion
+
+
+        }
+        //#region
+        ////public static void print()
+        ////{
+        ////    Thread.Sleep(10000);
+        ////    Console.WriteLine("Hello World");
+        ////}
+        //#endregion
+       
+
+
+    }
+
+
+    class Abc<T>
+    {
+        public void GetData(T a, T b)
+        {
+            Console.WriteLine(a.ToString() + b.ToString());
+            Console.WriteLine(b);
+        }
+
+    }
+    public delegate int GetData(int a, int b);
+    public delegate bool CheckNumber(int Num);
+    class DelTest
+    {
+        public int AddTwoNo(int a, int b)
+        {
+            return a + b;
+
+        }
+        public bool chekNumberTest(int Num)
+        {
+            if (Num > 3)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        public static List<int> TestdelegateParameters(List<int> lst, Delegate del)
+        {
+            List<int> lstResult = new List<int>();
+            
+            foreach (int i in lst)
+            {
+                if (Convert.ToBoolean(del.DynamicInvoke(i)))
+                {
+                 
+                    lstResult.Add(i);
+                }
+            }
+           
+            return lstResult;
+
+
+        }
+
+    }
+
+  public  class A
+    { 
+        public virtual void GetName()
+        {
+            Console.WriteLine("Parent");
+        }
+    }
+  public  class B:A
+    {
+        public override void GetName()
+        {
+            Console.WriteLine("Child");
+            base.GetName();
+        }
+    
+    }
+  public class OverLoadibng
+  {
+      [Obsolete("Better to use three overloaded method")]
+      public void Add(int a, int b)
+      {
+          Console.WriteLine(a + b);
+      }
+      public void Add(int a, int b,int c)
+      {
+          Console.WriteLine(a + b +c);
+      }
+      public void Add(int a, int b,int c,int d)
+      {
+          Console.WriteLine(a + b+ c+d);
+      }
+
+  }
+  public class Customers
+  {
+      List<Address> address = new List<Address>() {new Address(){Id=1, Name="Dheeraj"},new Address(){Id=2,Name="Raja"},new Address(){Id=3,Name="Hari"} };
+
+      public Address this[int id]
+      {
+          get {
+              Address ad = address.SingleOrDefault(x => x.Id == id);
+               return ad;
+              }
+      }
+      public Address this[string Name]
+      {
+          get {
+              Address ad = address.SingleOrDefault(x => x.Name == Name);
+              return ad;
+          }
+      }
+  
+  }
+  public class Address
+  {
+     public int Id { get; set; }
+     public string Name { get; set; }
+  }
+  public static class ExtensionMethod
+  {
+      public static   string GetConCatinateddata( this String Name,string Lname)
+      {
+          return "Dheeraj" + Name;
+      }
+
+  }
+  
+}
